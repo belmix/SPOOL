@@ -37,8 +37,8 @@ Usage of this software requires abilities with sysadmin, database admin, coin da
 
 ### Features
 
-* For the pool server it uses the highly efficient [cryptocurrency-stratum-pool](//github.com/AoD-Technologies/cryptocurrency-stratum-pool) module which
-supports vardiff, PoW, PoS, transaction messages, anti-DDoS, IP banning, and [many hashing algorithms](//github.com/AoD-Technologies/cryptocurrency-stratum-pool#hashing-algorithms-supported).
+* For the pool server it uses the highly efficient [stratum-pool](//github.com/Konstantin35/stratum-pool-kawpow) module which
+supports vardiff, PoW, PoS, transaction messages, anti-DDoS, IP banning, and [many hashing algorithms](//github.com/Konstantin35/stratum-pool-kawpow#hashing-algorithms-supported).
 
 * The portal has an [MPOS](//github.com/MPOS/php-mpos) compatibility mode so that it can
 function as a drop-in-replacement for [python-stratum-mining](//github.com/Crypto-Expert/stratum-mining). This
@@ -129,7 +129,7 @@ a good pool operator. For starters be sure to read:
 Clone the repository and run `npm install` for all the dependencies to be installed:
 
 ```bash
-git clone https://github.com/AoD-Technologies/cryptocurrency-pool-server.git
+git clone https://github.com/Konstantin35/cryptocurrency-pool-server.git
 cd cryptocurrency-pool-server
 npm install
 ```
@@ -329,7 +329,7 @@ Here is an example of the required fields:
 ````
 
 For additional documentation how to configure coins and their different algorithms
-see [these instructions](//github.com/AoD-Technologies/cryptocurrency-stratum-pool#module-usage).
+see [these instructions](//github.com/Konstantin35/stratum-pool-kawpow#module-usage).
 
 
 ##### Pool config
@@ -454,7 +454,7 @@ Description of options:
 You can create as many of these pool config files as you want (such as one pool per coin you which to operate).
 If you are creating multiple pools, ensure that they have unique stratum ports.
 
-For more information on these configuration options see the [pool module documentation](https://github.com/AoD-Technologies/cryptocurrency-stratum-pool#module-usage)
+For more information on these configuration options see the [pool module documentation](https://github.com/Konstantin35/stratum-pool-kawpow#module-usage)
 
 
 ##### [Optional, recommended] Setting up blocknotify
@@ -490,7 +490,7 @@ output.
 
 #### Upgrading
 When updating Cryptocurrency Pool Server to the latest version it's important to not only `git pull` the latest from this repo, but to also update
-the `cryptocurrency-stratum-pool` and `node-multi-hashing` modules, and any config files that may have been changed.
+the `stratum-pool` and `node-multi-hashing` modules, and any config files that may have been changed.
 * Inside your server directory (where the init.js script is) do `git pull` to get the latest code.
 * Remove the dependenices by deleting the `node_modules` directory with `rm -r node_modules`.
 * Run `npm install` to force updating/reinstalling of the dependencies.
